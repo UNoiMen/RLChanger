@@ -8,7 +8,7 @@ int main(int argc, char** args)
 	if(argc > 0)
 	{
 		ofstream file;
-		file.open("realmlist.wtf");
+		file.open("/Data/ruRU/realmlist.wtf");
 		file << "set realmlist " << args[1];
 		file.close();
 	}
