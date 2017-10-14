@@ -5,19 +5,14 @@ using namespace std;
 
 int main()
 {
-	ifstream file;
-	file.open("test.log");
+	ofstream file;
+	file.open("realmlist.wtf");
 
-	string temp, file_backup;
-	file >> file_backup;
+	string temp;
+	cin >> temp;
+	file << "set realmlist " << temp;
+
 	file.close();
 
-	ofstream file2;
-	file2.open("test.log");
-	cin >> temp;
-	cout << file_backup;
-	file2 << file_backup << temp;
-
-	file2.close();
 	return 0;
 }
