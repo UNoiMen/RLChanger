@@ -2,7 +2,6 @@
 #include <fstream>
 
 using namespace std;
-const char* RLPATH = "Data/ruRU/realmlist.wtf";
 
 int main(int argc, char** args)
 {

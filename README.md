@@ -1,5 +1,5 @@
 # RLChanger
-Realmlist changer for WoW WoTLK or newer(Russian client)
+Realmlist changer for WoW (ruRU,enGB client)
 # Using:
 1.Move executable file to WoW directory.
 
