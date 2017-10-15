@@ -2,24 +2,35 @@
 #include <fstream>
 
 using namespace std;
+const char* RLPATH = "Data/ruRU/realmlist.wtf";
 
 int main(int argc, char** args)
 {
-	if(argc > 0)
+	bool check = false;
+	fstream file;
+	file.open("realmlist.wtf");
+	if(file.is_open()) {check = true;}
+	else
 	{
-		ofstream file;
-		file.open("/Data/ruRU/realmlist.wtf");
+		file.open("Data/ruRU/realmlist.wtf");
+		if(file.is_open()) {check = true;}
+		else
+		{
+			file.open("Data/enGB/realmlist.wtf");
+			if(file.is_open()) {check = true;}
+		}
+	}
+	if(check == true)
+	if(argc > 1)
+	{
 		file << "set realmlist " << args[1];
-		file.close();
 	}
 	else
 	{
-		ofstream file;
-		file.open("/Data/ruRU/realmlist.wtf");
 		string temp;
 		cin >> temp;
 		file << "set realmlist " << temp;
-		file.close();
 	}
+	file.close();
 	return 0;
 }
